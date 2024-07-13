@@ -1,0 +1,87 @@
+import styled from "styled-components";
+
+export const RegisterContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url("/assets/register.jpg") center;
+  background-size: object-fit;
+
+  .register_content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 40%;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    .input {
+      width: 100%;
+      padding: 7px 15px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      outline: none;
+      text-align: center;
+      color: white;
+
+      &:not(:placeholder-shown):focus {
+        background: transparent; /* or background: none; */
+      }
+
+      &::placeholder {
+        color: white;
+      }
+    }
+
+    .imageLabel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      cursor: pointer;
+      color: white;
+      font-size: 14px;
+    }
+
+    .submitBtn {
+      margin-top: 15px;
+      width: 40%;
+      border-radius: 30px;
+      text-decoration: none;
+      border: none;
+      padding: 0.5rem;
+      margin-bottom: 0.6rem;
+      background-color: #ff4c4c;
+      color: white;
+
+      &:hover {
+        box-shadow: 0 0 10px 3px rgba(255, 255, 255);
+      }
+    }
+  }
+
+  .anchor {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    margin-top: 10px;
+    text-align: center;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`;

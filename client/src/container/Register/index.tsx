@@ -6,13 +6,13 @@ import useRegister from './hooks'
 
 const Register = () => {
 
-  const { form, handleChange } = useRegister();
+  const { form, handleChange, handleSubmit } = useRegister();
 
 
   return (
     <RegisterContainer>
       <div className="register_content">
-        <form action="" className='formContainer'>
+        <form action="" className='formContainer' onSubmit={handleSubmit}>
           <input
             placeholder='First Name'
             name='firstName'
@@ -58,7 +58,6 @@ const Register = () => {
             accept='image/*'
             type='file'
             style={{ display: "none" }}
-            required
             name='profileImage'
           />
           <label htmlFor='image' className='imageLabel'>
